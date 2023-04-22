@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Welome Kwesi Donations {% endblock %}
+{% block content %}
+<section class="relative">
+    <div class="main-section relative overflow-hidden border-b-2 shadow-md">
+        <div class="relative sm:overflow-hidden">
+            <img src="{% static './images/home-image.jpg'%}" class="cover w-full brightness-50" alt="">
+            <div class="absolute top-96 left-10 right-10 flex justify-center items-center sm:overflow-hidden">
+                <div class="text-center text-white w-1/2">
+                    <!-- <h1 class="text-6xl xs:text-xs font-bold">Welcome to FUNDUS.org</h1><br>
+                    <p class="leading-10 lg:text-xl sm: text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum fugiat in quaerat earum reprehenderit maxime provident nostrum, voluptate corporis blanditiis praesentium unde animi esse odio accusamus ratione atque laboriosam repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="flex  justify-center items-center gap-10 py-5">
+                        <button class="rounded-full border-2 hover:border-red-700 hover:bg-gray-200 hover:text-black border-gradient-to-r from-white to-red-600 p-3">Setup a FundUS.org Account</button>
+                        <button class="rounded-full border-2 hover:border-red-700 hover:bg-gray-200 hover:text-black border-gradient-to-r from-white to-red-600 p-3">Setup a FundUS.org Account</button>
+                    </div> -->
+                </div>
+            </div>
+        </div> 
+    </div>
+</section>
+<section class="bg-gray-100">
+    <div class="">
+        <div class="container mx-auto p-2">
+            <div class="p-5 lg:w-1/2 md:w-full">
+                <h1 class="text-6xl font-bold">What FundUS is About</h1>
+                <p class="text-justify leading-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed laborum pariatur reprehenderit, quam consequatur error ullam accusantium, <img src="{% static 'images/boss.png'%}" class="ml-2  p-1 float-right absolute opacity-80" width="5%" alt="">rem hic suscipit nam, impedit eum officiis tenetur ducimus repellat maxime! Cupiditate, accusantium. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus molestias odit quibusdam quae dolores cum, recusandae sit corrupti perspiciatis accusamus dolore accusantium aut, expedita reiciendis, quas excepturi nisi architecto minima? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vel iusto quas voluptatum praesentium! Veritatis, nobis unde. Quibusdam repellat quae nihil eveniet ex incidunt assumenda rerum reiciendis laudantium. Accusamus, earum? </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

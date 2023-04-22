@@ -1,0 +1,146 @@
+{% load static %}
+<!Doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  	<meta name="description" content="Donation and Fundraising Platform for all indivduals and organization">
+  	<meta name="keywords" content="Best,FundRaising,  Popular, Donation, Charity">
+  	<meta name="author" content="Kwasi">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+	<link rel="stylesheet" href="{% static 'styless.css'%}">
+    	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+	<!------// Page-Header//----->
+	<section class="web-header">
+		<div class="header py-5">
+			<div class="text-sm font-['Tahoma'] text-blue-80 container mx-auto">
+				<div class="flex flex-wrap justify-center lg:justify-between items-center gap-5">
+					<div class="flex flex-wrap gap-1 justify-center">
+						<div class="">
+							<label for="">For Enquires: <span class="ml-2"><i class="fa-solid fa-envelope mr-2"></i></span><span><a href="mailto:president.gancofa@outlook.com"><span class="lowercase">info@fundUS.org</span></a></span></label>
+						</div>
+						<div class="">
+							<label for=""><span><i class="fa-solid fa-phone ml-2 mr-2"></i></span><span><span><a href="#">Hotline: +233 (0) 00 000 0000 / +233 (0) 00 000 0000</a></span></label>
+						</div>
+					</div>
+					<div>
+						<div class="">
+							<p class="text-center">Follow us on our Media Platforms:</p>
+							<div class=" flex justify-center gap-5 lg:text-lg">
+								<a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+								<a href="#"><i class="fa-brands fa-twitter"></i></a>
+								<a href="#"><i class="fa-brands fa-facebook"></i></a>
+								<a href="#"><i class="fa-brands fa-youtube"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="search pt-2 text-sm flex lg:flex-row lg:justify-between justify-center items-center">
+					<form action="#" method="POST">
+						{% csrf_token %}
+						<input class="px-3 py-2 focus:text-left focus:transition focus:duration-75 text-center rounded-full border-2" type="search" placeholder="search here">
+						<button><i class="fa-solid fa-magnifying-glass ml-2"></i></button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!------ //(Navigation Bar) //-->
+    <section class="sticky top-1 z-20">
+      <div class="text-sm font-['Tahoma'] text-blue-80 container mx-auto lg:px-10 sm:px-2 bg-gray-100 shadow-lg lg:rounded-full">
+        <div class="header">
+          <nav class="navbar">
+            <div class="flex justify-between items-center">
+				<div class="brand-logo font-bold lg:text-2xl pl-5 lg:px-0">
+					<a href="#" class="hover:text-green-800 text-green-600 font-['Gugi']">FundUS.org</a>
+				</div>
+				<div class="navbar">
+					<div class="flex items-center invisible lg:visible lg:gap-5 gap-2">
+						<div class="uppercase">
+							<ul class="flex lg:gap-6 gap-2 text-xs lg:text-sm ">
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Services</a></li>
+								<div><h6><a href="#" class="hover:text-green-600 font-bold">Login here</a></h6></div>
+							</ul>
+						</div>
+						<div class="">
+							<button class="lg:rounded-full p-2 mt-2 mb-2 bg-green-500 text-white hover:bg-green-700">Setup a FundUS Account Now</button>
+						</div>
+					</div>
+				</div>
+				<div class="pr-10 visible lg:invisible text-xl font-bold"><i class="fa-sharp fa-solid fa-bars"></i></div>
+			</div>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+	<!------ // Page Main Body//---->
+	<section class="web-body">{% block content %}{% endblock %}</section>
+	
+	<!---------// Footer // ---->
+	<section class="web-footer border-t-2">
+		<div class="bg-white">
+			<div class="container mx-auto">
+				<div class="flex flex-wrap lg:flex-row justify-center lg:justify-between items-center p-2 gap-5">
+					<div class="flex justify-center px-10 items-center text-center text-green-500">
+						<p class="font-bold font-['arial'] text-3xl uppercase">fundus.org</p>
+					</div>
+					<div class="">
+						<label for="" class="text-green-600 font-bold ">About</label>
+						<h1 class=""><a href="{% url 'home'%}">About us</a></h1>
+						<h1 class=""><a href="#">Executives of FundUS</a></h1>
+						<h1 class=""><a href="#">Blog</a></h1>
+					</div>
+					<div class="">
+						<label for="title" class="text-green-600 font-bold ">Other Useful Links</label>
+						<h1 class=""><a href="#">Ashanti Region</a></h1>
+						<h1 class=""><a href="#">Bono Region</a></h1>
+					</div>
+					<div class="">
+						<label for="title" class="text-green-600 font-bold ">Our Address</label>
+						<h1 class="mb-2"><i class="fa-solid fa-location-dot mr-2"></i>FundUS.org <br> <span class="ml-6">P. O. Box, xxxx</span><br><span class="ml-6">K & k Street, 11000</span><br><span class="ml-6">Adum - Kumasi, Ghana</span></h1>
+						
+						<h1 class="mb-2"><i class="fa-solid fa-phone mr-2"></i>Office: +233 (0) xx xxx xxxx<br><span class="ml-6">Office: +233 (0) xx xxx xxxx</span></h1>
+
+						<h1 class=""><i class="fa-solid fa-envelope mr-2"></i><a href="mailto:president.gancofa@outlook.com">info@fundus.org</a><br> <span class="ml-6"><a href="mailto:president.gancofa@outlook.com">support@fundus.org</a></span></h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bg-white border-t-2">
+			<div class="container mx-auto p-4">
+				<div class="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-row gap-5 p-2 items-center justify-between text-black text-sm">
+					<div class="">
+						<h6 class="mb-3 font-bold">&copy;2023, FundUS.org: <span>All Rights Reserved</span></h6>
+						<div class="text-sm ">
+							<div class="flex flex-wrap gap-2">
+								<h1 class="underline"><a href="#">Terms & Condition</a></h1>
+								<h1 class="underline"><a href="#">Terms of use</a></h1>
+								<h1 class="underline"><a href="#">Privacy Policy</a></h1>
+								<h1 class="underline"><a href="#">SiteMap</a></h1>
+							</div>
+						</div>
+					</div>
+					<div class="flex flex-wrap sm:flex-wrap md:flex-wrap lg:flex-row gap-5 justify-center">
+						<label class=""><a class="hover:text-green-700" href="{% url 'home'%}"><i class="fa-solid fa-house mr-2"></i>Home</a></label>
+						<label class=""><a class="hover:text-green-700" href="{% url 'home'%}"><i class="fa-solid fa-house-signal mr-2"></i>About</a></label>
+						<label class=""><a class="hover:text-green-700" href="{% url 'home'%}"><i class="fa-solid fa-question mr-2"></i>FAQs</a></label>
+						<label class=""><a class="hover:text-green-700" href="{% url 'home'%}"><i class="fa-solid fa-address-book mr-2"></i>Contact-US</a></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!------//  scripts loader//------>
+	
+</body>
+</html>
